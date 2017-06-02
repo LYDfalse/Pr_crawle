@@ -1,6 +1,6 @@
 # Pr_crawle
 
-数据库信息在 `pr\ysqlpipelines\sql.py` 修改
+数据库信息在 `pr\mysqlpipelines\sql.py` 修改
 
 数据库表
 ```
