@@ -3,6 +3,7 @@ import re
 from bs4 import BeautifulSoup
 from scrapy.http import Request
 from pr.items import PrItem
+from pr.items import DcontentItem
 from pr.mysqlpipelines.sql import Sql
 
 class PrSpider(scrapy.Spider):
@@ -69,7 +70,7 @@ class PrSpider(scrapy.Spider):
                                                                                 'chapterurl': chapterurl
                                                                                 })
     def get_chaptercontent(self, response):
-        item = PrItem
+        item =DcontentItem()
         item['num'] = response.meta['num']
         item['id_name'] = response.meta['name_id']
         item['chaptername'] = str(response.meta['chaptername']).replace('\xa0', '')

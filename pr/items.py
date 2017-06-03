@@ -35,3 +35,4 @@ class DcontentItem(scrapy.Item):
     #章节地址
     chaptername = scrapy.Field()
     #章节名字
+    url = scrapy.Field()
